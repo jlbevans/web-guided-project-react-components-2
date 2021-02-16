@@ -22,13 +22,14 @@ export default function App() {
     setFriends(
       friends.map((fr) => {
         // for each friend, if the friend has the given id,
-        if (fr.id == id) {
-          // return a copy of the friend object which has the toggled civil status
-          return { ...fr, married: !fr.married };
-          // otherwise, return the friend unchanged
-        } else {
-          return fr;
-        }
+        // if (fr.id == id) {
+        //   // return a copy of the friend object which has the toggled civil status
+        //   return { ...fr, married: !fr.married };
+        //   // otherwise, return the friend unchanged
+        // } else {
+        //   return fr;
+        // }
+        return friends.id == id ? { ...fr, married: !fr.married } : fr;
       })
     );
   };
