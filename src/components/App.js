@@ -29,7 +29,7 @@ export default function App() {
         // } else {
         //   return fr;
         // }
-        return friends.id == id ? { ...fr, married: !fr.married } : fr;
+        return fr.id == id ? { ...fr, married: !fr.married } : fr;
       })
     );
   };
